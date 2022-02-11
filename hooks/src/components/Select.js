@@ -31,7 +31,7 @@ const Select = () => {
         </form>
         <ul>
             {items.map((item, index) => {
-                return <li key="index">{item.id} {JSON.stringify(item)}</li>
+                return <li key={index}>{item.id} {JSON.stringify(item)}</li>
             })}
         </ul>
     </>
