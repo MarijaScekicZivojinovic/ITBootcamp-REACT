@@ -16,9 +16,12 @@ function TodoForm({ addTodo }) {
         setTodos({ ...todos, text: '' });
     };
 
-    // const handleChange = e => {
-    //     setTodos({ ...todos, text: e.target.value });
-    // };
+    const handleChange = e => {
+        e.preventDefault();
+        // setTodos({ ...todos, { text: e.target.value, id: '' }});
+        setTodos(e.target.value)
+
+    };
 
     return (
         <form onSubmit={handleSubmit} className="todoForm">
@@ -27,8 +30,8 @@ function TodoForm({ addTodo }) {
                 className='todoInput'
                 placeholder='Add a to-do task'
                 value={todos.text}
-                // onChange={handleChange} 
-                onChange={e => setTodos(e.target.value)}
+                onChange={handleChange}
+                // onChange={e => setTodos({ text: e.target.value })}
                 required
             />
             <button className='todoButton'>Add a task</button>
