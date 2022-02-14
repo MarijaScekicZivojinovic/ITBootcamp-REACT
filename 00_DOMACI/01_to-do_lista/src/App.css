@@ -56,6 +56,12 @@
 li, nav, h1{
   margin-bottom: 10px;
 }
+
+li{
+  width: 500px;
+  text-align: right;
+  word-wrap: break-word;
+}
 li .todoButton {
 margin-left: 10px;
 }

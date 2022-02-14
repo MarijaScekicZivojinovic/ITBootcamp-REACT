@@ -12,7 +12,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    const localStorageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    const localStorageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (localStorageTodos) {
       setTodos(localStorageTodos);
     }
@@ -49,6 +49,7 @@ function App() {
           <h1>What are our tasks?</h1>
         </div>
         <ul>
+          {/* creating a list of items ; by using map() we will be able to create a new array of items by mapping over todo items from state and displaying them by index */}
           {todos.map((todo, index) => (
             <Todo
               key={index}

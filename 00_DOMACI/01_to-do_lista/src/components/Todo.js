@@ -3,6 +3,8 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+// this component returns a list with all of the to-do tasks that we entered
+
 function Todo({ todo, index, removeTodo }) {
 
     return (
