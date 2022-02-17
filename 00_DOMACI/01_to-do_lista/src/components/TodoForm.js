@@ -13,6 +13,7 @@ function TodoForm({ addTodo }) {
     const handleSubmit = e => {
         e.preventDefault();
         addTodo(todos);
+        // addTodo({ ...todos, index: '' });
         setTodos({ ...todos, text: '' });
     };
 
