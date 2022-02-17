@@ -25,17 +25,17 @@ function App() {
     });
   }
 
-  useEffect(() => {
-    //uvek, i tokom prvog renderovanja i tokom svakog update-a
-  });
+  // useEffect(() => {
+  //   //uvek, i tokom prvog renderovanja i tokom svakog update-a
+  // });
 
-  useEffect(() => {
-    //samo tokom prvog renderovanja
-  }, []);
+  // useEffect(() => {
+  //   //samo tokom prvog renderovanja
+  // }, []);
 
-  useEffect(() => {
-    //kadgod se moj todos promeni
-  }, [todos]);
+  // useEffect(() => {
+  //   //kadgod se moj todos promeni
+  // }, [todos]);
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem(TODOS_KEY));
