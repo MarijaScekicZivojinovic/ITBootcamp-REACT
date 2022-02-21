@@ -1,3 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.wrapper img{
+    height: 200px;
+    width: auto;
+}
+
+.ratingBar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    flex-grow: 0;
+}
+
 .listMain{
     align-items: center;
     width: 400px;

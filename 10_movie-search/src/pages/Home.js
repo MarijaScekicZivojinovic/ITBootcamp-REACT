@@ -3,7 +3,6 @@ import API from '../config/api';
 import { apiKey } from '../config/apiKey'; //mora unutar {} jer us apiKey.js nismo stavili export DEFAULT
 import { initialState, reducer } from "../reducer";
 import { SEARCH_MOVIES_REQUEST, SEARCH_MOVIES_FAILED, SEARCH_MOVIES_SUCCESS } from '../reducer/types';
-import MovieList from '../components/Movie/MovieList';
 import Movies from '../components/Movie/Movies';
 import Loading from '../components/Loading/Loading';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';

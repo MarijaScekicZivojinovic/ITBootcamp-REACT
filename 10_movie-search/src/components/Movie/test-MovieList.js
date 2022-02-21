@@ -1,7 +1,7 @@
 //movies.map(movie => movie.Title) //ubaci i sliku
 //ovo sam sama radila
 import React from "react";
-import MovieListItem from './MovieListItem';
+import MovieListItem from './test-MovieListItem';
 import { } from './style.css'
 
 const MovieList = ({ movies }) => {
