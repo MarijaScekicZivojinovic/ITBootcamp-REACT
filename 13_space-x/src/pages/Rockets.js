@@ -5,7 +5,11 @@ const Rockets = () => {
 
     const [rockets, setRockets] = useState([]);
 
-    useEffect(() => { }, []);
+    // prima dva parametra
+    //  arrow f-ju i niz
+    // prazan niz def onMounting
+    // neki state u nizu, definise pozivanje arrow f-je kada se taj state promeni
+    //   useEffect(() => {}, []);
     useEffect(() => {
         API.get('/rockets')
             .then(res => {

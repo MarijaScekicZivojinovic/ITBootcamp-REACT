@@ -7,7 +7,8 @@ import ChildComponent3 from './components/ChildComponent3';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
+    //super() it calls the construction function of the parent class (Component)
     this.state = {
       name: 'This name will change in 3 seconds.',
       show: true,

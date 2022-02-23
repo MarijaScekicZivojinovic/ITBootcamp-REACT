@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import API from '../config/api';
+import { Link } from "react-router-dom";
 
 const Launches = () => {
 
     const [launches, setLaunches] = useState([]);
 
+    // prima dva parametra
+    //  arrow f-ju i niz
+    // prazan niz def onMounting
+    // neki state u nizu, definise pozivanje arrow f-je kada se taj state promeni
+    //   useEffect(() => {}, []);
     useEffect(() => {
         API.get('/launches')
             .then(res => {
@@ -16,7 +22,13 @@ const Launches = () => {
     return (
         <div>
             <h2>Launches</h2>
-            <ul>
+            {state &&
+                state.map((launch) => (
+                    <Link to={`/launchdetails/${launch.flight_number}`} key={launch.id}>
+                        {launch.mission_name}
+                    </Link>
+                ))}
+            {/* <ul>
                 {
                     launches && launches.map((launch) =>
                         <li key={launch.id}>
@@ -27,7 +39,7 @@ const Launches = () => {
                             <p>Rocket: {launch.rocket.rocket_name}</p>
                         </li>)
                 }
-            </ul>
+            </ul> */}
         </div>
     )
 }

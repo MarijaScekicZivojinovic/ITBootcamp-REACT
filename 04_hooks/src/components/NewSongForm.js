@@ -11,7 +11,8 @@ const NewSongForm = ({ addSong }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addSong(title)
+        addSong(title);
+        setTitle('');
     }
 
     return <form style={{ marginTop: 20 }} onSubmit={handleSubmit}>

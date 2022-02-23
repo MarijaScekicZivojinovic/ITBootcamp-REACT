@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Missions from './pages/Missions';
 import Rockets from './pages/Rockets';
 import Launches from './pages/Launches';
+import LaunchDetails from "./components/LauncheDetails";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/missions" element={<Missions />} />
           <Route path="/rockets" element={<Rockets />} />
           <Route path="/launches" element={<Launches />} />
+          <Route path="/launchdetails/:id" element={<LaunchDetails />} />
         </Routes>
         {/* Nase Route END */}
       </Router>

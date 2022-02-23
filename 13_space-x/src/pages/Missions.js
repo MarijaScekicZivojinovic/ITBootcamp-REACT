@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API from '../config/api';
+import MissionDetail from "../components/MissionDetails";
 
 const Missions = () => {
 
@@ -18,7 +19,10 @@ const Missions = () => {
             <h2>
                 Missions
             </h2>
-            <ul>
+            {state.map((mission) => (
+                <MissionDetail key={mission.mission_id} mission={mission} />
+            ))}
+            {/* <ul>
                 {
                     missions && missions.map((mission) =>
                         <li key={mission.mission_id}>
@@ -26,7 +30,7 @@ const Missions = () => {
                             <h3>{mission.mission_name}</h3>
                         </li>)
                 }
-            </ul>
+            </ul> */}
         </div>
     )
 }
